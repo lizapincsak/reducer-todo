@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../actions/index';
+import { ADD_TODO, TOGGLE_COMPLETED } from '../actions/index';
 
 export const initialState ={
     todos: [{
@@ -29,7 +29,7 @@ const reducer = (state, action) => {
         return({
             ...state, todos:[...state.todos, newTodo]
         })
-        case("TOGGLE_COMPLETED"):
+        case(TOGGLE_COMPLETED):
         //map through each todo
         //if tod has id we're looking for (in the action.payload), return a copy of the item with completed flipped
         //if todo does not have the id we are looking for, return the item as is

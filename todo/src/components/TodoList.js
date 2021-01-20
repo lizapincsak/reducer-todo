@@ -2,9 +2,11 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => {
-  handleClick = () => {
+
+const handleClick = () => {
     props.handleClearCompleted()
   }
+
 return(
     <div className="ListContainer">
     <h3>List of Items</h3>

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color: black;
+  color: green;
 }
 
 .App-logo {
@@ -40,6 +40,6 @@
 
 .completed{
   color: red ;
-  font-size: 30px;
-  text-decoration: strike;
+  font-weight: bold;
+  text-decoration: line-through;
 }

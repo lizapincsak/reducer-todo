@@ -10,7 +10,7 @@ export const addTodo = title => {
 
 export const toggleCompleted = id => {
     return ({
-        type:"TOGGLE_COMPLETED", 
+        type:TOGGLE_COMPLETED, 
         payload: id
     })
 }
