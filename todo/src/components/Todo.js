@@ -1,17 +1,13 @@
 import React from 'react';
 
 const Todo = props => {
-
+    const {todo, handleToggleCompleted} = props;
     const handleClick = () => {
-        props.handleTodoToggle(props.todo.id);
+        handleToggleCompleted(todo.id);
+        
     }
-
-    return(
-        <div className="todo-container">
-            <div className="todo-list" onClick={handleClick} className={`task${props.todo.completed ? ' completed' : ''}`}>
-                <p className="todo">{props.todo.task}</p>
-            </div>
-        </div>
+    console.log(todo.completed);
+    return(<li onClick={handleClick} className={todo.completed ? "completed": ""}>{todo.title}</li>
     )
 }
 

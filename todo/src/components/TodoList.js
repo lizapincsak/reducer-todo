@@ -1,20 +1,23 @@
 import React from 'react';
-import Todo from './Todo.js';
+import Todo from './Todo';
 
-const TodoList = props => {
-    
-    const handleClick = () => {
-        props.handleTodoCompleted();
-    }
-
-    return(
-        <div className="completed-container">
-            {props.todo.map(td => (
-                <Todo handleTodoToggle={props.handleTodoToggle} key={td.id} todo={td}/>
-            ))}
-            <button onClick={handleClick} className="complete-btn">Clear List</button>
-        </div>
-    )
+const TodoList = (props) => {
+  handleClick = () => {
+    props.handleClearCompleted()
+  }
+return(
+    <div className="ListContainer">
+    <h3>List of Items</h3>
+    <ul>
+      {
+        props.todos.map(todo => {
+          return(<Todo todo={todo} handleToggleCompleted={props.handleToggleCompleted}/>)
+        })
+      }
+    </ul>
+    <button onClick={handleClick}>Clear Completed</button>
+  </div>
+)
 }
 
 export default TodoList;
